@@ -1,5 +1,7 @@
 package com.nju.edu.graph;
 
+import java.util.Arrays;
+
 /**
  * 图
  * @author Martin7-1
@@ -82,5 +84,64 @@ public class Graph {
             subsets[yRoot].parent = xRoot;
             subsets[xRoot].rank++;
         }
+    }
+
+    /**
+     * Kruskal算法生成最小生成树
+     * 贪心思想，将所有边排序并在不会形成环的情况下从小到大加入图中
+     * @return minimum weight of the MST
+     */
+    public int KruskalMST() {
+        // 最小生成树有V-1条边
+        Edge[] result = new Edge[V];
+        int e = 0;
+
+        for (int i = 0; i < V; i++) {
+            result[i] = new Edge();
+        }
+
+        // 步骤一：对所有边进行排序
+        // 这里可以通过拷贝一份边来排序，防止破坏原本图的结构
+        Arrays.sort(edge);
+
+        subset[] subsets = new subset[V];
+        for (int i = 0; i < V; i++) {
+            subsets[i] = new subset();
+        }
+
+        // 先将所有并查集的树根设置为自身
+        for (int v = 0; v < V; v++) {
+            subsets[v].parent = v;
+            // 只有一个树根的情况高度为0
+            subsets[v].rank = 0;
+        }
+
+        int index = 0;
+        while (e < V - 1) {
+            // 每次挑选最小的边
+            Edge nextEdge = edge[index++];
+            int x = find(subsets, nextEdge.src);
+            int y = find(subsets, nextEdge.dest);
+
+            // 判断x和y是不是同一个并查集中，即判断该条边会不会形成环
+            if (x != y) {
+                result[e++] = nextEdge;
+                // 将两个集合合并
+                union(subsets, x, y);
+            } else {
+                // nothing to do
+                // discard the edge
+            }
+        }
+
+        System.out.println("Following are the edges in the constructed MST");
+        int minimumWeight = 0;
+        for (int i = 0; i < e; i++) {
+            System.out.println(result[i].src + " -- " + result[i].dest + " == " + result[i].weight);
+            minimumWeight += result[i].weight;
+        }
+
+        System.out.println("Minium weight MST: " + minimumWeight);
+        return minimumWeight;
     }
 }
