@@ -5,5 +5,5 @@ data-structure,com.nju.edu.graph,Graph.subset,0,6,0,0,0,1,0,1,0,1
 data-structure,com.nju.edu.graph,Graph,6,256,1,19,1,45,1,13,0,4
 data-structure,com.nju.edu.list,MyLinkedList.ListNode,0,24,0,0,0,8,0,3,0,3
 data-structure,com.nju.edu.list,MyLinkedList,4,203,5,23,2,55,5,15,0,6
-data-structure,com.nju.edu.list,ListNode,19,0,0,0,8,0,3,0,3,0
-data-structure,com.nju.edu.list,Joseph,79,3,6,0,19,1,5,1,2,1
+data-structure,com.nju.edu.list,ListNode,5,14,0,0,2,6,1,2,1,2
+data-structure,com.nju.edu.list,Joseph,0,85,0,6,0,21,0,6,0,3
