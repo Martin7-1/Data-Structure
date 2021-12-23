@@ -17,20 +17,6 @@ public class BinaryTree<T extends Comparable<? extends T>> {
         this(null);
     }
 
-    public BinaryTree(String pre, String in) {
-        // 用先序遍历和中序遍历来构造一棵树
-        makeTree(pre, in);
-    }
-
-    /**
-     * 根据中序遍历和先序遍历构建一棵二叉树
-     * @param pre 先序遍历的节点顺序
-     * @param in 中序遍历的节点顺序
-     */
-    private void makeTree(String pre, String in) {
-        // TODO: 根据先序遍历和中序遍历构建一棵树   
-    }
-
     /**
      * 前序遍历遍历树
      * @return 前序遍历的顺序，递归解法
