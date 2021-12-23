@@ -48,8 +48,8 @@ public class BinaryTree<T extends Comparable<? extends T>> {
         }
 
         list.add(node.element);
-        inorderTraverse(node.left, list);
-        inorderTraverse(node.right, list);
+        preorderTraverse(node.left, list);
+        preorderTraverse(node.right, list);
     }
 
     /**
