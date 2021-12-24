@@ -172,10 +172,10 @@ public class BinarySearchTree {
 
         if (root.element > x) {
             // 当前节点值比x大，递归向左搜索
-            root = remove(x, root.left);
+            root.left = remove(x, root.left);
         } else if (root.element < x) {
             // 当前节点值比x小，递归向右搜索
-            root = remove(x, root.right);
+            root.right = remove(x, root.right);
         } else {
             // 有3种情况
             // 1. x是叶子节点，直接删除
