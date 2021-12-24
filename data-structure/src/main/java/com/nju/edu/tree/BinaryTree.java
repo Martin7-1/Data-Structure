@@ -39,6 +39,33 @@ public class BinaryTree<T extends Comparable<? extends T>> {
     }
 
     /**
+     * 不使用递归而使用栈来完成中序遍历
+     * @return 中序遍历顺序的list
+     */
+    public List<T> inorderStack() {
+        Deque<BinaryNode<T>> stack = new LinkedList<>();
+        BinaryNode<T> node = root;
+        List<T> res = new ArrayList<>();
+
+        while (true) {
+            while (node != null) {
+                stack.push(node);
+                // 不断将左子树节点压入栈，因为中序遍历是从左子树的叶子节点开始的
+                node = node.left;
+            }
+            if (!stack.isEmpty()) {
+                node = stack.pop();
+                res.add(node.element);
+                node = node.right;
+            } else {
+                break;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * 中序遍历遍历树
      * @return 中序遍历的结果
      */

@@ -39,6 +39,19 @@ public class TraverseTest {
     }
 
     @Test
+    public void inorderStackTest() {
+        BinaryNode<Integer> root = new BinaryNode<Integer>(0);
+        root.left = new BinaryNode<>(1);
+        root.right = new BinaryNode<>(2);
+        tree.root = root;
+        actual = tree.inorderTraverse().stream().mapToInt(Integer::intValue).toArray();
+        List<Integer> list = Arrays.asList(1, 0, 2);
+        expect = list.stream().mapToInt(Integer::intValue).toArray();
+
+        assertArrayEquals(expect, actual);
+    }
+
+    @Test
     public void preorderTest1() {
         BinaryNode<Integer> root = new BinaryNode<Integer>(0);
         root.left = new BinaryNode<>(1);
