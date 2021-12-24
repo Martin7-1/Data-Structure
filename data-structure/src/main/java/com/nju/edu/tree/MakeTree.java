@@ -3,6 +3,10 @@ package com.nju.edu.tree;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 利用前序遍历和中序遍历构造一棵二叉树
+ * @author Martin
+ */
 public class MakeTree {
 
     BinaryNode<Character> root;

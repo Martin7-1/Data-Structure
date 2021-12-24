@@ -33,5 +33,20 @@ public class MakeTreeTest {
 
         assertEquals(expect, actual);
     }
+
+    @Test
+    public void makeTreeTest2() {
+        pre = "ABCDEFG";
+        in = "CBEDGFA";
+        tree = new MakeTree(pre, in);
+
+        // 根据后序遍历来比对
+        // 转换一个character的list到string
+        List<Character> chars = tree.postorderTraverse();
+        actual = chars.stream().map(String::valueOf).collect(Collectors.joining());
+        expect = "CEGFDBA";
+
+        assertEquals(expect, actual);
+    }
     
 }

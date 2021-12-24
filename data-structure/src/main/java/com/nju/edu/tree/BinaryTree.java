@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
 
+/**
+ * 二叉树的四种遍历
+ * @author Martin
+ */
 public class BinaryTree<T extends Comparable<? extends T>> {
     BinaryNode<T> root;
 
