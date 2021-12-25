@@ -51,9 +51,6 @@ public class InsertionSortTest {
             }
             sort = new InsertionSort(temp);
 
-            for (int j = 0; j < len; j++) {
-                System.out.print(temp.get(j) + " ");
-            }
             System.out.println();
             expect = temp.stream().mapToInt(Integer::intValue).toArray();
             System.out.println("system quick sort start time = " + System.currentTimeMillis());
