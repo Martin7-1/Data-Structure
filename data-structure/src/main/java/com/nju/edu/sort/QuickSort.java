@@ -3,7 +3,7 @@ package com.nju.edu.sort;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuickSort {
+public class QuickSort implements Sort {
 
     private int[] arr;
     private List<Integer> list = new ArrayList<>();
@@ -34,7 +34,13 @@ public class QuickSort {
     /**
      * 对当前保存的数组进行快速排序
      */
-    public void quickSort() {
+    @Override
+    public void sort() {
+        quickSort(arr, 0, arr.length - 1);
+    }
+
+    @Override
+    public void sort(int[] arr) {
         quickSort(arr, 0, arr.length - 1);
     }
 
