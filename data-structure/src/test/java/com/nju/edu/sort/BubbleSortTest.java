@@ -53,12 +53,10 @@ public class BubbleSortTest {
 
             System.out.println();
             expect = temp.stream().mapToInt(Integer::intValue).toArray();
-            System.out.println("system quick sort start time = " + System.currentTimeMillis());
             Arrays.sort(expect);
-            System.out.println("system quick sort end time = " + System.currentTimeMillis());
-            System.out.println("my quick sort start time = " + System.currentTimeMillis());
+            System.out.println("my bubble sort start time = " + System.currentTimeMillis());
             sort.sort();
-            System.out.println("my quick sort end time = " + System.currentTimeMillis());
+            System.out.println("my bubble sort end time = " + System.currentTimeMillis());
             System.out.println();
             actual = sort.getArr();
 
