@@ -1,5 +1,7 @@
 package com.nju.edu.heap;
 
+import java.util.List;
+
 public class MinHeap {
     
     private static final int DEFAULT_CAPACITY = 100;
@@ -9,6 +11,11 @@ public class MinHeap {
 
     public MinHeap() {
         this(DEFAULT_CAPACITY);
+    }
+
+    public MinHeap(List<Integer> list) {
+        this.arr = list.stream().mapToInt(Integer::intValue).toArray();
+        buildHeap();
     }
 
     public MinHeap(int capacity) {

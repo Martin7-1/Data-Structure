@@ -62,11 +62,17 @@ public class QuickSort implements Sort {
             while (arr[j] > pivot && i < j) {
                 j--;
             }
-            arr[i] = arr[j];
+            if (i < j) {
+                arr[i] = arr[j];
+                i++;
+            }
             while (arr[i] < pivot && i < j) {
                 i++;
             }
-            arr[j] = arr[i];
+            if (i < j) {
+                arr[j] = arr[i];
+                j--;
+            }
         }
 
         arr[i] = pivot;

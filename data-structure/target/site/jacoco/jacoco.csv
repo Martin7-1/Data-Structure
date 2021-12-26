@@ -13,7 +13,7 @@ data-structure,com.nju.edu.sort,BubbleSort,34,74,0,6,9,14,4,7,4,4
 data-structure,com.nju.edu.sort,SelectionSort,34,72,0,6,9,20,4,7,4,4
 data-structure,com.nju.edu.sort,InsertionSort,34,63,0,6,9,15,4,7,4,4
 data-structure,com.nju.edu.sort,MergeSort,42,150,0,14,10,28,4,12,4,5
-data-structure,com.nju.edu.sort,QuickSort,37,96,0,12,9,23,4,10,4,4
+data-structure,com.nju.edu.sort,QuickSort,37,104,0,16,9,27,4,12,4,4
 data-structure,com.nju.edu.graph,Graph.subset,0,6,0,0,0,1,0,1,0,1
 data-structure,com.nju.edu.graph,Graph,6,256,1,19,1,45,1,13,0,4
 data-structure,com.nju.edu.graph,TopologicalSort.Vertex,0,12,0,0,0,5,0,1,0,1
@@ -22,7 +22,7 @@ data-structure,com.nju.edu.graph,Graph.Edge,0,12,0,0,0,2,0,2,0,2
 data-structure,com.nju.edu.graph,TopologicalSort,5,78,2,10,2,23,3,7,1,3
 data-structure,com.nju.edu.graph,MST,35,135,2,20,4,27,2,13,1,3
 data-structure,com.nju.edu.disj,DisjSet,82,0,8,0,15,0,7,0,3,0
-data-structure,com.nju.edu.heap,MinHeap,189,0,22,0,36,0,21,0,10,0
+data-structure,com.nju.edu.heap,MinHeap,201,0,22,0,40,0,22,0,11,0
 data-structure,com.nju.edu.heap,OverflowException,7,0,0,0,4,0,2,0,2,0
 data-structure,com.nju.edu.list,MyLinkedList,4,203,5,23,2,55,5,15,0,6
 data-structure,com.nju.edu.list,ListNode,5,14,0,0,2,6,1,2,1,2

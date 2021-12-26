@@ -45,7 +45,7 @@ public class QuickSortTest {
         List<Integer> temp = new ArrayList<>();
 
         for (int i = 0; i < 5000; i++) {
-            int len = random.nextInt(100);
+            int len = random.nextInt(100000);
             for (int j = 0; j < len; j++) {
                 temp.add(random.nextInt(Integer.MAX_VALUE));
             }
