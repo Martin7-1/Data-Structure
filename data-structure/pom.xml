@@ -5,7 +5,8 @@
 
   <groupId>com.nju.edu</groupId>
   <artifactId>data-structure</artifactId>
-  <version>0.0.1</version>
+  <packaging>jar</packaging>
+  <version>0.1.1</version>
 
   <name>data-structure</name>
   <!-- FIXME change it to the project's website -->
